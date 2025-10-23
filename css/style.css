@@ -1,0 +1,84 @@
+/* Aplica estilo global a todos os elementos */
+*{
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Inclui padding e border na largura/altura do elemento */
+    font-family: 'Courier New', Courier, monospace; /* Define a fonte padrão */
+}
+
+/* Estilo do body (corpo da página) */
+body{
+    display:flex; /* Define um layout flexível */
+    align-items: center; /* Centraliza verticalmente os elementos filhos */
+    height:100vh; /* Altura igual à altura da janela */
+    justify-content: center; /* Centraliza horizontalmente os elementos filhos */
+    width: 100%; /* Largura total */
+    background: linear-gradient(180deg, #fb8ffd 0%, #7c1693); /* Fundo degradê vertical */
+}
+
+/* Container principal do cronômetro */
+#stopwath{
+    display: flex; /* Layout flexível */
+    flex-direction: column; /* Elementos filhos dispostos em coluna */
+    background-color: black; /* Cor de fundo preta */
+    padding: 2rem; /* Espaçamento interno */
+    border-radius: 8px ; /* Borda arredondada */
+}
+
+/* Estilo do cronômetro */
+#timer{
+    background-color: black; /* Fundo preto */
+    height: 250px; /* Altura do círculo */
+    width: 250px; /* Largura do círculo */
+    border: 3px solid #fb8ffd; /* Borda colorida */
+    margin-bottom: 1.5rem; /* Espaço abaixo do cronômetro */
+    border-radius: 100%; /* Forma circular */
+    display: flex; 
+    align-items: center; /* Centraliza conteúdo verticalmente */
+    justify-content: center; /* Centraliza conteúdo horizontalmente */
+    font-weight: 600; /* Negrito */
+    font-size: 30px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor do texto */
+    padding: 4rem; /* Espaçamento interno extra */
+}
+
+/* Container dos botões */
+#action{
+    display: flex; /* Layout flexível */
+    gap: 0.5rem; /* Espaço entre os botões */
+}
+
+/* Estilo dos botões */
+#action button{
+    display: flex; /* Layout flexível */
+    align-items: center; /* Centraliza conteúdo verticalmente */
+    justify-content: center; /* Centraliza conteúdo horizontalmente */
+    width: 100%; /* Largura total disponível */
+    height: 40px; /* Altura do botão */
+    padding:.6rem; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    border-radius: 4px; /* Borda arredondada */
+    border:none; /* Remove borda padrão */
+    color: #262626; /* Cor do texto */
+    background-color: beige; /* Cor de fundo */
+    transition: background-color .2s ease-in; /* Transição suave ao mudar a cor do fundo */
+    cursor: pointer; /* Cursor de mão ao passar em cima */
+}
+
+/* Efeito hover nos botões */
+#action button:hover{
+    background-color: #fb8ffd; /* Muda a cor de fundo quando o mouse passa em cima */
+}
+
+/* Lista de marcações/tempos */
+#mark-list{
+    display: flex; /* Layout flexível */
+    flex-direction: column; /* Elementos dispostos em coluna */
+    gap: 0.7rem; /* Espaço entre os itens */
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Primeira marcação da lista */
+#mark-list p:first-child{
+   margin-top: 1.5rem; /* Espaço acima do primeiro item */
+} 

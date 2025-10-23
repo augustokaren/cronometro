@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- define o idioma principal da página -->
+<head>
+    <meta charset="UTF-8"> <!-- garante que acentos e caracteres especiais funcionem -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- deixa a página responsiva -->
+
+    <!-- link para o arquivo CSS local -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- link para os ícones do Font Awesome (usados nos botões) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <title>Cronômetro</title> <!-- título que aparece na aba do navegador -->
+</head>
+
+<body>
+  <!-- container principal do cronômetro -->
+  <div id="cronometro">
+
+    <!-- visor do tempo (ligado ao elemento timerEl no JavaScript) -->
+    <h2 id="timer">00:00:00:00</h2>
+
+    <!-- área que contém os botões de ação -->
+    <div id="action">
+
+      <!-- botão de reset: zera o tempo e as marcas -->
+      <button id="reset">
+        <i class="fa-solid fa-rotate-right"></i> <!-- ícone de "reiniciar" -->
+      </button>
+
+      <!-- botão principal: inicia, pausa ou continua o cronômetro -->
+      <!-- o atributo "action" muda dinamicamente no JavaScript -->
+      <button id="power" action="start"> <!-- conectado à função toggleTimer() -->
+        <i class="fa-solid fa-play"></i> <!-- ícone de "play" -->
+      </button>
+            
+      <!-- botão de marcação: salva o tempo atual -->
+      <button id="mark"> <!-- conectado à função markTime() -->
+        <i class="fa-solid fa-flag"></i> <!-- ícone de bandeira (marca) -->
+      </button>
+    </div>
+
+    <!-- área onde aparecerão as marcas salvas -->
+    <div id="marks-list"></div>
+
+    <!-- importa o script JavaScript (controla a lógica do cronômetro) -->
+    <script src="javascript/script.js"></script>
+
+  </div> <!-- fim do container principal -->
+</body>
+</html>
